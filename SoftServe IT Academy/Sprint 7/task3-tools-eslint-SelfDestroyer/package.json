@@ -1,0 +1,13 @@
+{
+  "name": "eslint_project",
+  "version": "1.0.0",
+  "description": "eslint project",
+  "author": "IT Academy",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4"
+  }
+}
