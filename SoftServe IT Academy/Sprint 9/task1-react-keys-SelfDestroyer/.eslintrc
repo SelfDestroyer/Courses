@@ -1,0 +1,7 @@
+{
+ "extends": ["react-app"],
+ "rules": {
+   "react/jsx-key": 2,
+   "react/no-array-index-key": 2
+ }
+}
