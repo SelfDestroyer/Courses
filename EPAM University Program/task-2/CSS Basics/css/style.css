@@ -1,0 +1,232 @@
+/* ============================================= */
+/* Перша сторінка на друк */
+@media print {
+  #ideas,
+  #about,
+  .tm-sidebar,
+  .blocks,
+  .heading,
+  .tm-main-content > #ideas + .tm-content-box {
+    display: none;
+  }
+
+  #home {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .container {
+    max-width: 590px;
+  }
+
+  section > .tm-content-box .tm-section-title {
+    color: #0400f3;
+  }
+  section > .tm-content-box .padding-medium {
+    padding-top: 0px;
+  }
+  section > .tm-content-box {
+    display: flex;
+    align-items: center;
+  }
+
+  section > .tm-content-box::before {
+    content: none;
+  }
+
+  .flex-item {
+    max-width: 100%;
+  }
+}
+/* ============================================= */
+/* Стиль параграфів та заголовків*/
+p{
+  
+}
+p::first-letter {
+  margin: 0px 0px 0px 25px;
+
+  text-transform: uppercase;
+  color: lightskyblue;
+
+  font-size: 30px;
+}
+h1,
+h2 {
+  color: lightskyblue;
+}
+h2 + p {
+  font-style: italic;
+}
+/* ============================================= */
+/* Баннер */
+#home {
+  background: #f2f2f2;
+}
+.tm-banner-inner {
+  background: #ffffff;
+}
+.tm-banner-inner p::first-letter{
+  margin: 0px 0px 0px 0px;
+  background: #ffffff;
+}
+/* ============================================= */
+/* Інтро */
+section:first-of-type .flex-2-col {
+  display: flex;
+}
+section .tm-content-box .padding-medium {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+section .tm-content-box .padding-medium h2 {
+  align-self: start;
+}
+.flex-item img {
+  max-width: 750px;
+}
+
+/* ============================================= */
+/* Секція "We Are..." */
+.heading .padding-medium h2 {
+  text-align: center;
+}
+/* ============================================= */
+/* Секція "Out Work" */
+.blocks .padding-medium h2 + p {
+  font-style: italic;
+}
+.blocks p::first-letter {
+  margin: 0px 0px 0px 0px;
+  color: initial;
+}
+
+/* Блоки з картінками */
+.blocks .boxes p {
+  font-style: italic;
+}
+.blocks .boxes .box {
+  padding: 12px;
+}
+.blocks .boxes .box:nth-child(2n) {
+  background: #f2f2f2;
+}
+/* ============================================= */
+/* Секція "How We Do It" */
+#ideas h2 {
+  color: gainsboro;
+  letter-spacing: 5px;
+}
+#ideas p::first-letter {
+  margin: 0px 0px 0px 0px;
+}
+/* ============================================= */
+/* Ефект ховер на навігацію і тіні для блоків */
+
+section,
+.tm-sidebar,
+#home {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.tm-main-nav ul li:hover {
+  background: #f5f5f5;
+}
+
+/* Трикутник для секцій */
+
+.tm-content-box,
+.blocks {
+  position: relative;
+}
+
+.tm-content-box::before,
+.blocks::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border-left: 240px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 38px solid lightskyblue;
+  transform: rotate(180deg);
+}
+.blocks .tm-content-box::before,
+#home::before {
+  content: none;
+}
+/* ============================================= */
+/* Стилі для плиток */
+
+/* Ефект при наведенні */
+.box-bg:hover {
+  background: #9fd8fb;
+}
+.box-bg:hover h2 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ============================================= */
+/* Стилі для силок */
+
+/* Лейбли для  ‘Designers’ та ‘Strategists’ */
+.text {
+  position: relative;
+}
+.text::after {
+  content: "New";
+  position: absolute;
+  color: red;
+  font: 0.8em sans-serif;
+}
+
+/* Візульні ефекти силок */
+.padding-medium ol li a {
+  color: #000000;
+}
+.padding-medium ol li a:hover {
+  color: #9fd8fb;
+  text-decoration-style: double;
+}
+.padding-medium ol li a:visited {
+  text-decoration: underline;
+}
+/* ============================================= */
+/* Стилі для форми */
+
+/* Зірочка для email */
+form > div:nth-child(2) {
+  position: relative;
+}
+
+form > div:nth-child(2)::after {
+  content: " *";
+  color: red;
+}
+
+/* Кнопка */
+.btn {
+  padding: 10px 40px;
+
+  display: block;
+  margin-left: auto;
+
+  border-radius: 0px;
+  border-color: lightskyblue;
+  background: none;
+  color: lightskyblue;
+}
+.btn:hover {
+  color: #ffff;
+  background: #9fd8fb;
+  border-color: lightskyblue;
+}
+/* ============================================= */
+/* Підвал */
+.tm-footer p::first-letter{
+  margin: 0px;
+}
+
+/* ============================================= */
