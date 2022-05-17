@@ -1,0 +1,260 @@
+body {
+  font-family: 'Lucida Sans Unicode';
+}
+
+.header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+.bodyForTypeOfSearch {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bodyForRadioButtons {
+  margin: 0px 0px 0px 20px;
+}
+
+select:required:invalid {
+  color: gray;
+}
+
+option {
+  color: black;
+}
+p {
+  text-align: center;
+}
+.noItems {
+  text-align: center;
+}
+
+table {
+  border: 0.1px solid #c9c9c9;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-spacing: 1px;
+  border-collapse: separate;
+}
+thead {
+  background-color: #44a04c;
+  color: #fff;
+}
+tbody {
+  text-align: center;
+}
+th {
+  padding: 20px 5px 20px 5px;
+  border: 0.1px solid #c9c9c9;
+}
+
+th:first-child {
+  width: 300px;
+}
+th:nth-child(2) {
+  width: 150px;
+}
+th:nth-child(3) {
+  width: 200px;
+}
+th:nth-child(4) {
+  width: 200px;
+}
+th:nth-child(5) {
+  width: 150px;
+}
+th:last-child {
+  width: 150px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #f1f1f0;
+}
+td {
+  border: 0.1px solid #c9c9c9;
+  padding: 0px 20px 0px 20px;
+}
+/* Country arrow  */
+.country-arrow {
+  position: relative;
+}
+tbody tr:hover {
+  background: rgba(128, 128, 128, 0.24);
+}
+/* arrow down */
+.country-arrow-body-down {
+  cursor: pointer;
+  width: 2px;
+  height: 14px;
+  display: none;
+  position: absolute;
+  left: 225px;
+  top: 27px;
+  background: #f9fd00;
+  z-index: 2;
+}
+.country-arrow-body-down::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  cursor: pointer;
+  height: 5px;
+  left: 2px;
+  top: 9px;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.country-arrow-body-down::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  cursor: pointer;
+  display: block;
+  height: 5px;
+  left: -2px;
+  top: 9px;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  z-index: 1;
+
+  transform: rotate(-45deg);
+}
+
+/* arrow up */
+.country-arrow-body-up {
+  width: 2px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  left: 225px;
+  top: 25px;
+  background: #f9fd00;
+  cursor: pointer;
+  z-index: 2;
+}
+.country-arrow-body-up::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 5px;
+  cursor: pointer;
+  left: 2px;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+.country-arrow-body-up::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 5px;
+  left: -2px;
+  top: 0px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  z-index: 1;
+
+  transform: rotate(225deg);
+}
+
+/* Area arrow up */
+.area-arrow {
+  position: relative;
+}
+
+/* arrow down */
+.area-arrow-body-down {
+  cursor: pointer;
+  width: 2px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  left: 108px;
+  top: 26px;
+  background: #f9fd00;
+  z-index: 2;
+}
+.area-arrow-body-down::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  cursor: pointer;
+  height: 5px;
+  left: 2px;
+  top: 9px;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+.area-arrow-body-down::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  cursor: pointer;
+  display: block;
+  height: 5px;
+  left: -2px;
+  top: 9px;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  z-index: 1;
+
+  transform: rotate(-45deg);
+}
+/* arrow up */
+
+.area-arrow-body-up {
+  cursor: pointer;
+  width: 2px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  left: 108px;
+  top: 26px;
+  background: #f9fd00;
+  z-index: 2;
+}
+.area-arrow-body-up::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 2px;
+  cursor: pointer;
+  height: 5px;
+  left: 2px;
+  top: 0px;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  transform: rotate(-45deg);
+  z-index: 1;
+}
+.area-arrow-body-up::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  cursor: pointer;
+  display: block;
+  height: 5px;
+  left: -2px;
+  top: 0px;
+  transform: translate(-50%, -50%);
+  background-color: #f9fd00;
+  z-index: 1;
+
+  transform: rotate(45deg);
+}
