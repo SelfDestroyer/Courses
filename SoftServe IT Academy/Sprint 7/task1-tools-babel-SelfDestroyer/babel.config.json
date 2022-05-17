@@ -1,0 +1,7 @@
+{
+  "overrides": [{
+    "test": ["./src/lib/*"],
+    "presets": ["@babel/preset-env"]
+  }],
+  "test": ["./src/**/*"]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "babel_project",
+  "version": "1.0.0",
+  "description": "babel project",
+  "author": "IT Academy",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.16.11"
+  },
+  "dependencies": {
+    "jest": "^27.5.1"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "babel src -d out"
+  }
+}
