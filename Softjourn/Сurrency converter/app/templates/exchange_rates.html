@@ -1,0 +1,55 @@
+{% extends 'base.html'  %}
+
+{% block title %}Exchange rates{% endblock %}
+
+{% block main %}
+<main>
+    <div class="container-xxl">
+        <div class="row d-flex justify-content-center">
+            <h1 class="py-4 text-center">Exchange rates on {{ current_date }}</h1>
+            <div class="col-sm-8">
+                <form class="mb-2" method="post" action="/exchange_rates">
+                    <div class="form-group fs-5 d-flex flex-column">
+                        <label for="datePicker" class="fs-5 mb-1" style="font-weight: 500">Currency with exchange rates
+                            change</label>
+                        <input type="date" id="datePicker" value="dd.mm.yy" min={{min_date}} max={{max_date}} style="cursor: pointer" name="datePicker"
+                               class="form-control mb-2 shadow-sm rounded" required>
+                        {% for msg in get_flashed_messages() %}
+                        <div class="alert alert-danger my-0 py-2 mb-1 fs-5 text-center shadow-sm rounded" role="alert">
+                            {{ msg }}
+                        </div>
+                        {% endfor %}
+                        <div class="d-grid gap-2 my-2 d-md-block align-self-end ">
+                            <a href="/" class="btn py-2 btn-outline-primary shadow-sm rounded"
+                               style="font-weight: 500; font-size: 16px;">Back to menu</a>
+                            <button class="btn py-2 btn-outline-success shadow-sm rounded" type="submit"
+                                    style="font-weight: 500; font-size: 16px;">View exchange rate
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="overflow-auto shadow-sm rounded" style="height: 350px;">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">Letter code of foreign currency</th>
+                            <th scope="col">At the rate of the NBU</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for el in user_exchange_rate %}
+                        <tr>
+                            <td>{{ el.letterCode }}</td>
+                            <td>
+                                {{ el.exchangeRate | replace(",", ".") }}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html'  %}
+
+{% block title %}Menu{% endblock %}
+
+{% block main %}
+<main>
+    <div class="container-xxl">
+        <div class="row d-flex justify-content-center">
+            <h1 class="py-4 text-center">Simple currency converter</h1>
+            <h4 class="text-center">Menu</h4>
+            <div class="d-grid gap-2 d-flex flex-column align-items-center">
+                <a class="btn btn-outline-primary py-2 shadow-sm rounded" style="font-weight: 500"
+                   href="/UAH_to_foreign_currency">FOREX converter UAH to foreign currency as of today (NBU rates)</a>
+                <a class="btn btn-outline-success  py-2 shadow-sm rounded" style="font-weight: 500"
+                   href="/foreign_currency_to_UAH">FOREX converter foreign currency to UAH as of today (NBU rates)</a>
+                <a class="btn btn-outline-danger py-2 shadow-sm rounded" style="font-weight: 500"
+                   href="/exchange_rates">FOREX
+                    ratings as of selected date (NBU rates)</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

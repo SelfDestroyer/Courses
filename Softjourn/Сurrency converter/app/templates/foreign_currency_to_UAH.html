@@ -1,0 +1,50 @@
+{% extends 'base.html'  %}
+
+{% block title %}Converter{% endblock %}
+
+{% block main %}
+<main>
+    <div class="container-xxl">
+        <h1 class="text-center py-4">Foreign currency to UAH</h1>
+        <div class="row d-flex justify-content-center">
+            <div class="col-sm-8 position-relative">
+                {% for msg in get_flashed_messages() %}
+                <div class="alert alert-danger flash py-2 my-0 mt-2 fs-6 text-center shadow-sm rounded"
+                     style="right: 10px; top: -20px" role="alert">
+                    {{ msg }}
+                </div>
+                {% endfor %}
+                <form class="d-flex flex-column" method="post" action="/foreign_currency_to_UAH">
+                    <div class="mb-2">
+                        <label for="amountOfCurrency" class="form-label fs-5">Amount of currency</label>
+                        <input type="text" class="form-control shadow-sm rounded" name="amountOfCurrency"
+                               id="amountOfCurrency" placeholder="Input the amount of currency" required>
+                    </div>
+                    <div class="mb-1 position-relative">
+                        <label for="currencyName" class="form-label fs-5">Name of foreign currency</label>
+                        <select class="form-select shadow-sm rounded" name="currencyName" id="currencyName">
+                            <option value="selected" selected>Choose a foreign currency</option>
+                            {% for el in current_exchange_rate %}
+                                <option value="{{ el.letterCode }}" data-Unit="{{ el.numberOfCurrencyUnits}}" data-exchangeRate="{{ el.exchangeRate}}">{{ el.currencyName }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    {% if user_money %}
+                    <div class="">
+                        <span class="fs-5">You get: <span>{{user_money}}</span> UAH</span>
+                    </div>
+                    {% endif %}
+                    <div class="d-grid gap-2 mt-3 d-md-block align-self-end">
+                        <a href="/" class="btn py-2 btn-outline-primary shadow-sm rounded"
+                           style="font-weight: 500; font-size: 16px; margin-right: 5px">Back to menu</a>
+                        <button class="btn py-2 btn-outline-success shadow-sm rounded" type="submit"
+                                style="font-weight: 500; font-size: 16px;">Exchange
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
