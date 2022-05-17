@@ -1,0 +1,13 @@
+.error {
+  margin: 0px 0px 0px 50px;
+  padding: 5px 25px;
+  background-color: rgb(237, 32, 32);
+  border-radius: 5px;
+}
+
+.error__message {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+}

@@ -1,0 +1,36 @@
+.card {
+  padding: 50px 0px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  margin: 0px 0px 0px 50px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  text-align: left;
+}
+
+img {
+  width: 20%;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 0px;
+  margin: 10px 0px 0px 0px;
+  width: 250px;
+  cursor: pointer;
+}
