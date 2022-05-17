@@ -1,0 +1,14 @@
+{
+  "name": "webpack_demo",
+  "version": "1.0.0",
+  "description": "Webpack Demo",
+  "author": "IT Academy",
+  "license": "ISC",
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
