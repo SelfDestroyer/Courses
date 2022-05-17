@@ -1,0 +1,12 @@
+{
+  "name": "gulp_project",
+  "version": "1.0.0",
+  "description": "gulp project",
+  "main": "gulpfile.js",
+  "author": "IT Academy",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1"
+  }
+}
