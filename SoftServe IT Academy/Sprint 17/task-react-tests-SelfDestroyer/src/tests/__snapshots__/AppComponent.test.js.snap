@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test component App Render corectly 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    Hello World!
+  </h1>
+  <div>
+    <h3>
+      GitHub User Info
+    </h3>
+    <ul>
+      <li>
+        error
+        : 
+        request error
+      </li>
+    </ul>
+  </div>
+  <div>
+    <h3>
+      GitHub User Info
+    </h3>
+    <ul>
+      <li>
+        error
+        : 
+        request error
+      </li>
+    </ul>
+  </div>
+</div>
+`;
