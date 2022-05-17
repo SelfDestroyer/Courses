@@ -1,0 +1,133 @@
+/* START: Task 1 Styles */
+#task1{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+td {
+  width: 120px;
+  height: 120px;
+
+  padding: 35px;
+  background: #fff;
+  box-sizing: border-box;
+
+  border: 2px solid black;
+  font-size: 18px;
+}
+
+.green {
+  background: green;
+}
+.blue {
+  background: blue;
+}
+.yellow {
+  background: yellow;
+}
+/* END: Task 1 Styles */
+
+/* START: Task 2 Styles */
+#task2 {
+  margin: 30px 0px 30px 0px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+#is-valid {
+  padding: 15px 15px 15px 15px;
+  margin: 0px 0px 10px 0px;
+
+  display: none;
+
+  color: #fff;
+  background: #008000;
+  font-size: 18px;
+  border: 1.5px solid rgb(82, 74, 74);
+}
+#is-invalid {
+  padding: 15px 15px 15px 15px;
+  margin: 0px 0px 10px 0px;
+
+  display: none;
+
+  border: 1.5px solid rgb(82, 74, 74);
+  color: #fff;
+  background: #ff8080;
+  font-size: 18px;
+}
+.task2-form__body {
+  display: flex;
+  flex-flow: column;
+  width: 380px;
+}
+.task2-form__input {
+  padding: 0px 15px 0px 15px;
+  width: 100%;
+  height: 38px;
+  outline: 0;
+  border: 1px solid #000000;
+}
+.taks2-form__button-body {
+  display: flex;
+}
+.task2-form__button {
+  width: 50px;
+  height: 40px;
+
+  margin: 0px 0px 0px 10px;
+}
+
+/* END: Task 2 Styles */
+
+/* START: Task 3 Styles */
+#task3 {
+  box-sizing:  border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+.court-body {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+}
+.court {
+  width: 600px;
+  height: 300px;
+  user-select: none;
+}
+.ball {
+  width: 40px;
+  height: 40px;
+  top: 49%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all .8s;
+}
+.scoreboard {
+  padding: 0px 5px 0px 5px;
+  width: 600px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.info{
+  color: red;
+  font-weight: 700;
+  font-size: 20px;
+}
+.team-a {
+  font-weight: 500;
+  font-size: 18px;
+}
+.team-b {
+  font-weight: 500;
+  font-size: 18px;
+}
+/* END: Task 3 Styles */
